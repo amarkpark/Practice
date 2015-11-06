@@ -1,28 +1,58 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How I got here:
 
-Things you may want to cover:
+[Web Dev]:  /vagrant/src/practice $ git fetch origin
+From github.com:amarkpark/Practice
+   a954510..a841d48  master     -> origin/master
+ * [new branch]      develop    -> origin/develop
 
-* Ruby version
+[Web Dev]:  /vagrant/src/practice $ git checkout develop
+Branch develop set up to track remote branch develop from origin.
+Switched to a new branch 'develop'
 
-* System dependencies
+[Web Dev]:  /vagrant/src/practice $ git status
+# On branch develop
+nothing to commit (working directory clean)
 
-* Configuration
+[Web Dev]:  /vagrant/src/practice $ git checkout -b adding_infographic origin/develop
+Branch adding_infographic set up to track remote branch develop from origin.
+Switched to a new branch 'adding_infographic'
 
-* Database creation
+[Web Dev]:  /vagrant/src/practice $ git branch
+* adding_infographic
+  develop
+  master
+  testbranch1
 
-* Database initialization
+Now I'm going to add the infographic from the git branching. Meanwhile please see these resources:
 
-* How to run the test suite
+http://git-scm.com/book/en/v2/Git-Branching-Remote-Branches
+http://git-scm.com/docs/git-checkout
 
-* Services (job queues, cache servers, search engines, etc.)
+[Web Dev]:  /vagrant/src/practice $ git status
+# On branch adding_infographic
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   README.rdoc
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	Git-branching-model.pdf
+no changes added to commit (use "git add" and/or "git commit -a")
 
-* Deployment instructions
+[Web Dev]:  /vagrant/src/practice $ git add --all
+[Web Dev]:  /vagrant/src/practice $ git status
+# On branch adding_infographic
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Git-branching-model.pdf
+#	modified:   README.rdoc
+#
+[Web Dev]:  /vagrant/src/practice $ 
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Now I'm going to push these changes up as a pull request. ~AMP
